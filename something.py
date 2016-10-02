@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import json
 
 app = Flask(__name__)
@@ -39,7 +39,7 @@ def homepage():
 			</body>
 		</html>
 	"""
-    return output
+    return render_template("homepage.html")
 
 
 if __name__ == "__main__":
