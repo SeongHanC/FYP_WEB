@@ -21,7 +21,7 @@
     <nav class="navbar navbar-default" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="homepage.html">EV Solution</a>
+            <a class="navbar-brand" href="{{ url_for('homepage') }}">EV Solution</a>
             <a class="navbar-brand">Your One Stop Event Solution</a>
 
         </div>
@@ -29,8 +29,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="signup/signup.html">Sign Up</a></li>
-                <li><a href="login/login.html">Log In</a></li>
+                <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+                <li><a href="{{ url_for('login') }}">Log In</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </nav>
@@ -41,7 +41,8 @@
     <script src = "https://code.jquery.com/jquery.js"></script>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src = "js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
