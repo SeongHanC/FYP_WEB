@@ -1,6 +1,7 @@
 from flask import Flask, render_template,request,redirect,url_for
 from pyld import jsonld
 import json
+import RegisterClass
 
 app = Flask(__name__)
 
@@ -25,10 +26,23 @@ def login():
     return render_template('login.html', error=error)
 
 
-@app.route('/signup')
+@app.route('/register')
 
-def signup():
-    return render_template('signup.html')
+def register():
+
+    form = RegisterClass.RegistrationForm(request.form)
+
+    if request.method == 'POST' and form.validate():
+
+        '''
+        user = User(form.username.data, form.email.data,
+                    form.password.data)
+        db_session.add(user)
+        flash('Thanks for registering')
+        '''
+        return redirect(url_for('homepage'))
+
+    return render_template('register.html', form=form)
 
 if __name__ == '__main__':
     app.run(debug=True)
