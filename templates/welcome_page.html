@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EV Solution</title>
+
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <!--[if lt IE 9]>
+    <script src = "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src = "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{{ url_for('homepage') }}">EV Solution</a>
+            <a class="navbar-brand">Your One Stop Event Solution</a>
+
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading">
+                            <h1>Already a member?</h1>
+                        </div>
+                            <div class="panel-body">
+                                <a href="{{ url_for('login') }}">
+                                    <img src="/src/question_mark.png" class="img-responsive" style="width: 100%" alt="Find Event">
+                                </a>
+                            </div>
+                            <div class="panel-footer">
+                                <p id="find_event">Login</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h1>Have not register yet?</h1>
+                            </div>
+                            <div class="panel-body">
+                                <a href="{{ url_for('register') }}">
+                                    <img src="/src/question_mark.png" class="img-responsive" style="width: 100%" alt="Find Event">
+                                </a>
+                            </div>
+                            <div class="panel-footer">
+                                <p id="plan_event">Register</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src = "https://code.jquery.com/jquery.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

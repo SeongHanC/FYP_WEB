@@ -2,23 +2,19 @@
 
 {% block body %}
 
-<body>
+<h1>Login</h1>
+<br>
+<form class="form-signin" role="form" method="post" action="">
+    <input type="text" placeholder="Username" name="username" value="{{
+    request.form.username}}">
 
-    <div class="container">
-      <h1>Login</h1>
-      <br>
+    <input type="password" placeholder="Password" name="password" value="{{
+    request.form.password}}">
 
-      <form action="" method="post">
-          <input type="text" placeholder="Username" name="username" value="{{request.form.username }}">
-          <input type="password" placeholder="Password" name="password" value="{{request.form.password }}">
-          <input class="btn btn-default" type="submit" value="Login">
-      </form>
-
-      {% if error %}
-        <p class="error"><strong>Error:</strong> {{ error }}
-      {% endif %}
-
-    </div>
-  </body>
+    <button class="btn btn-sm btn-success" type="submit">Login</button>
+</form>
+{% if error %}
+    <p class="error"><strong>Error:</strong> {{ error }}</p>
+{% endif %}
 
 {% endblock %}
