@@ -8,19 +8,31 @@
       <h1>Event Planner</h1>
       <br>
 
-      <form action="" method="post">
-          <input type="text" placeholder="Name" name="name" value="{{request.form.name }}">
-          <input type="text" placeholder="Username" name="username" value="{{request.form.username }}">
-          <input type="password" placeholder="Password" name="password" value="{{request.form.password }}">
-          <input type="text" placeholder="Email" name="email" value="{{request.form.email }}">
-          <input class="btn btn-default" type="submit" value="Login">
+      <form name="event_form" action="{{url_for('event_planner')}}" method="post">
+          <div class="form-group">
+            <div class="input-group">
+                <label for="state">State: </label>
+                <select name = "state" id = "state" required>
+                    <option label="--Select State--"></option>
+                    <option value="Selangor">Selangor</option>
+                    <option value="Penang">Pulau Pinang</option>
+                </select>
+                <br>
+
+                <label for="event_type">Event Type: </label>
+                <select name = "Event_type" id = "event_type" required>
+                    <option label="--Select Event Type--"></option>
+                    <option value="Concert">Concert</option>
+                    <option value="Wedding">Wedding</option>
+                    <option value="Prom">Prom</option>
+                </select>
+
+            </div>
+              <button type="submit" name="submit" value="success" class="btn btn-default">Submit</button>
+          </div>
       </form>
 
-      {% if error %}
-        <p class="error"><strong>Error:</strong> {{ error }}
-      {% endif %}
-
     </div>
-  </body>
+</body>
 
 {% endblock %}

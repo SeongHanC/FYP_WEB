@@ -2,19 +2,17 @@
 
 {% block body %}
 
-<h1>Login</h1>
-<br>
-<form class="form-signin" role="form" method="post" action="">
-    <input type="text" placeholder="Username" name="username" value="{{
-    request.form.username}}">
-
-    <input type="password" placeholder="Password" name="password" value="{{
-    request.form.password}}">
-
-    <button class="btn btn-sm btn-success" type="submit">Login</button>
-</form>
-{% if error %}
-    <p class="error"><strong>Error:</strong> {{ error }}</p>
-{% endif %}
+<body>
+	<div class="container">
+		<br>
+		<h1>Login:</h1>
+		<br>
+		<form action="" class="form-inline" method="post">
+			<input type="text" class="form-control" placeholder = "Username" name="username" value="{{request.form.username}}">
+			<input type="password" class="form-control" placeholder = "Password" name="password" value="{{request.form.password}}">
+			<input class="btn btn-default" type="submit" value="Login">
+		</form>
+	</div>
+</body>
 
 {% endblock %}
