@@ -1,0 +1,493 @@
+[ {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ABC_Solution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers" ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Items" : [ {
+    "@value" : "Music Equipment (Guitar, Violin, etc), PA System"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Location" : [ {
+    "@value" : "123, Jalan KK, Kelana Jaya"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Name" : [ {
+    "@value" : "ABC_Solution"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_State" : [ {
+    "@value" : "Selangor"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Type" : [ {
+    "@value" : "Music"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#BLA_Sdn_Bhd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers" ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Items" : [ {
+    "@value" : "Catering (Western, Malay, Chinese, Indian, Fusion)"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Location" : [ {
+    "@value" : "99, Jalan SJ, Subang Jaya"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Name" : [ {
+    "@value" : "Bla_Sdn_Bhd"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_State" : [ {
+    "@value" : "Selangor"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Type" : [ {
+    "@value" : "F & B"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Band_Concert",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events" ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_capacity" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "100000"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_date" : [ {
+    "@value" : "2016-08-22"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_fee" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "300"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_organizer" : [ {
+    "@value" : "Star Planet"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_time" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "20.00"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_type" : [ {
+    "@value" : "Music"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_venue" : [ {
+    "@value" : "Stadium Merdeka"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Community",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#EP_Item",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_planner"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#EP_Location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_planner"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#EP_Name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_planner"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#EP_State",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_planner"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#EP_Type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_planner"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Items",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_State",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Edward",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User" ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_age" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "50"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_availability" : [ {
+    "@value" : "Yes"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_fee" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1000"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_location" : [ {
+    "@value" : "Ampang"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_name" : [ {
+    "@value" : "Edward"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_preference" : [ {
+    "@value" : "Food"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_capacity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_fee",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_organizer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_planner",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Community"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Community"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_time",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_venue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Geneve",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User" ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_age" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "30"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_availability" : [ {
+    "@value" : "Yes"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_fee" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "50"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_location" : [ {
+    "@value" : "Cheras"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_name" : [ {
+    "@value" : "Geneve"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_preference" : [ {
+    "@value" : "Extreme Sports"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#IAN_SDN_BHD",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers" ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Items" : [ {
+    "@value" : "All types of costumes"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Location" : [ {
+    "@value" : "12, Jalan PP, Gelugor"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Name" : [ {
+    "@value" : "Ian_Sdn_Bhd"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_State" : [ {
+    "@value" : "Pulau Pinang"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Type" : [ {
+    "@value" : "Costumes"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Ian",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User" ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_age" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "28"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_availability" : [ {
+    "@value" : "Yes"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_fee" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "500"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_location" : [ {
+    "@value" : "Bandar Sunway"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_name" : [ {
+    "@value" : "Ian"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_preference" : [ {
+    "@value" : "Technology"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Ivan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User" ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_age" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "25"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_availability" : [ {
+    "@value" : "Yes"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_fee" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "0"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_location" : [ {
+    "@value" : "Kota Kemuning"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_name" : [ {
+    "@value" : "Ivan"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_preference" : [ {
+    "@value" : "Anime/Manga"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Janice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User" ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_age" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "21"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_availability" : [ {
+    "@value" : "Yes"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_fee" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "100"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_location" : [ {
+    "@value" : "Subang Jaya"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_name" : [ {
+    "@value" : "Janice"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_preference" : [ {
+    "@value" : "Dance"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Jessica",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User" ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_age" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "20"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_availability" : [ {
+    "@value" : "Yes"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_fee" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "350"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_location" : [ {
+    "@value" : "Puchong"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_name" : [ {
+    "@value" : "Jessica"
+  } ],
+  "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_preference" : [ {
+    "@value" : "Music"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Community"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_age",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_availability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_fee",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_preference",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#can_join",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#needs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_planner"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#plans",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_planner"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#suggestions",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#can_join"
+  } ]
+} ]

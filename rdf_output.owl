@@ -1,0 +1,478 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#"
+     xml:base="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:untitled-ontology-3="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#can_join -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#can_join">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#needs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#needs">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_planner"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#plans -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#plans">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_planner"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#suggestions -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#suggestions">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#can_join"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#EP_Item -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#EP_Item">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_planner"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#EP_Location -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#EP_Location">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_planner"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#EP_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#EP_Name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_planner"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#EP_State -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#EP_State">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_planner"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#EP_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#EP_Type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_planner"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Items -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Items">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Location -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Location">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_State -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_State">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ES_Type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_capacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_capacity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_date">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_fee -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_fee">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_organizer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_organizer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_time -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_time">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_venue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_venue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_age">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_availability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_availability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_fee -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_fee">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_location -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_location">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_preference -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User_preference">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Community -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Community"/>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_planner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_planner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Community"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Community"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"/>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Community"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ABC_Solution -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ABC_Solution">
+        <rdf:type rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"/>
+        <ES_Items rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music Equipment (Guitar, Violin, etc), PA System</ES_Items>
+        <ES_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123, Jalan KK, Kelana Jaya</ES_Location>
+        <ES_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ABC_Solution</ES_Name>
+        <ES_State rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Selangor</ES_State>
+        <ES_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</ES_Type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#BLA_Sdn_Bhd -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#BLA_Sdn_Bhd">
+        <rdf:type rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"/>
+        <ES_Items rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catering (Western, Malay, Chinese, Indian, Fusion)</ES_Items>
+        <ES_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">99, Jalan SJ, Subang Jaya</ES_Location>
+        <ES_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bla_Sdn_Bhd</ES_Name>
+        <ES_State rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Selangor</ES_State>
+        <ES_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F &amp; B</ES_Type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Band_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Band_Concert">
+        <rdf:type rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Events"/>
+        <Event_capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</Event_capacity>
+        <Event_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016-08-22</Event_date>
+        <Event_fee rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</Event_fee>
+        <Event_organizer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Star Planet</Event_organizer>
+        <Event_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.00</Event_time>
+        <Event_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</Event_type>
+        <Event_venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stadium Merdeka</Event_venue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Edward -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Edward">
+        <rdf:type rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"/>
+        <User_age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</User_age>
+        <User_availability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</User_availability>
+        <User_fee rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</User_fee>
+        <User_location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ampang</User_location>
+        <User_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edward</User_name>
+        <User_preference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Food</User_preference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Geneve -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Geneve">
+        <rdf:type rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"/>
+        <User_age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</User_age>
+        <User_availability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</User_availability>
+        <User_fee rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</User_fee>
+        <User_location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cheras</User_location>
+        <User_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geneve</User_name>
+        <User_preference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Extreme Sports</User_preference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#IAN_SDN_BHD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#IAN_SDN_BHD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"/>
+        <ES_Items rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All types of costumes</ES_Items>
+        <ES_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12, Jalan PP, Gelugor</ES_Location>
+        <ES_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ian_Sdn_Bhd</ES_Name>
+        <ES_State rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pulau Pinang</ES_State>
+        <ES_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Costumes</ES_Type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Ian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Ian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"/>
+        <User_age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</User_age>
+        <User_availability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</User_availability>
+        <User_fee rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</User_fee>
+        <User_location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bandar Sunway</User_location>
+        <User_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ian</User_name>
+        <User_preference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technology</User_preference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Ivan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Ivan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"/>
+        <User_age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</User_age>
+        <User_availability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</User_availability>
+        <User_fee rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</User_fee>
+        <User_location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kota Kemuning</User_location>
+        <User_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ivan</User_name>
+        <User_preference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anime/Manga</User_preference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Janice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Janice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"/>
+        <User_age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</User_age>
+        <User_availability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</User_availability>
+        <User_fee rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</User_fee>
+        <User_location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subang Jaya</User_location>
+        <User_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Janice</User_name>
+        <User_preference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dance</User_preference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Jessica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Jessica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#User"/>
+        <User_age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</User_age>
+        <User_availability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</User_availability>
+        <User_fee rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</User_fee>
+        <User_location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Puchong</User_location>
+        <User_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jessica</User_name>
+        <User_preference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</User_preference>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

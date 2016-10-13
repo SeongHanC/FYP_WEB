@@ -57,6 +57,7 @@ def login():
     #     return render_template("login.html", error=error)
 
     error = ''
+
     try:
 
         if request.method == "POST":
@@ -64,7 +65,7 @@ def login():
             attempted_username = request.form['username']
             attempted_password = request.form['password']
 
-            if attempted_username == "admin" and attempted_password == "password":
+            if attempted_username == "admin" and attempted_password == "admin":
                 return redirect(url_for('homepage'))
 
             else:
