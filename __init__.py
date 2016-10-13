@@ -9,6 +9,7 @@ from RegistrationForm import Registration
 from DBConnect import connection
 from MySQLdb import escape_string as thwart
 import gc
+import rdflib_search
 
 app = Flask(__name__)
 app.secret_key = '\x88\xe4\x18H\xf3> d\x08\xa2\xe9U\r\xfc\xff,\x88\xa8\xe6\x87\x99u\x9b\x84'
@@ -124,12 +125,55 @@ def logout():
 @app.route('/event_planner',methods=['GET','POST'])
 def event_planner():
 
-    if request.method == 'POST':
-        select = request.form.get('state')
-        if (select == 'Selangor'):
-            return ("Hello")
+    error = ""
 
-    return render_template("event_planner.html")
+    try:
+
+        if request.method == 'POST':
+            select_state = request.form.get('state')
+            select_et = request.form.get('service')
+
+            if (select_state == 'Selangor' and select_et == 'Music Equipment'):
+                return redirect(url_for('result_selangor_musicEQ'))
+
+            elif (select_state == 'Selangor' and select_et == 'PA System'):
+                return redirect(url_for('result_selangor_pa_system'))
+
+            elif (select_state == 'Selangor' and select_et == 'Costumes'):
+                return redirect(url_for('result_selangor_FNB'))
+
+            elif (select_state == 'Penang' and select_et == 'Food & Beverages'):
+                return redirect(url_for('result_pen_costume'))
+
+            else:
+                error = "No match found, please find again"
+
+        return render_template("event_planner.html", error=error)
+
+    except Exception as e:
+        return render_template("event_planner.html", error=error)
+
+
+
+@app.route('/event_finder')
+def event_finder():
+    return "hello"
+
+@app.route('/result_selangor_musicEQ')
+def result_selangor_musicEQ():
+    return render_template("ABC_Solution.html")
+
+@app.route('/result_selangor_pa_system')
+def result_selangor_pa_system():
+    return render_template("ABC_Solution.html")
+
+@app.route('/result_selangor_FNB')
+def result_selangor_FNB():
+    return render_template("BLA_Sdn_Bhd.html")
+
+@app.route('/result_pen_costume')
+def result_pen_costume():
+    return render_template("ABC_Solution.html")
 
 if __name__ == '__main__':
     app.run(debug=True)

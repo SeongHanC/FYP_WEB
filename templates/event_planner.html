@@ -8,7 +8,7 @@
       <h1>Event Planner</h1>
       <br>
 
-      <form name="event_form" action="{{url_for('event_planner')}}" method="post">
+      <form name="event_form" action="{{url_for('event_planner')}}" method="POST">
           <div class="form-group">
             <div class="input-group">
                 <label for="state">State: </label>
@@ -19,12 +19,13 @@
                 </select>
                 <br>
 
-                <label for="event_type">Event Type: </label>
-                <select name = "Event_type" id = "event_type" required>
-                    <option label="--Select Event Type--"></option>
-                    <option value="Concert">Concert</option>
-                    <option value="Wedding">Wedding</option>
-                    <option value="Prom">Prom</option>
+                <label for="service">Which service are you looking for?: </label>
+                <select name = "service" id = "service" required>
+                    <option label="--Select Service--"></option>
+                    <option value="Costumes">Costumes</option>
+                    <option value="Food & Beverages">Food & Beverages</option>
+                    <option value="Music Equipment">Music Equipment</option>
+                    <option value="PA System">PA System</option>
                 </select>
 
             </div>
@@ -33,6 +34,10 @@
       </form>
 
     </div>
+
+    {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+	{% endif %}
 </body>
 
 {% endblock %}

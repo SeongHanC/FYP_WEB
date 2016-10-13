@@ -1,21 +1,32 @@
 from rdflib import Graph,Namespace,RDF
-from rdflib.namespace import FOAF,DC
 
 g = Graph()
 g.parse("rdf_output.owl")
 
-print "Number of triples",len(g)
+# a_list = g.serialize(destination="hello.owl")
 
-# g.bind("dc",DC)
-# g.bind("foaf",FOAF)
+my_namespace = Namespace("http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#")
 
-a_list = g.serialize(format="n3")
+co_name = []
+types = []
+states = []
+loc = []
+items = []
 
-# the_list = []
-#
-# the_list.append(a_list)
+for name in g.subjects(RDF.type,my_namespace.Event_suppliers):
+    #output.append(states)
 
-print a_list
+    co_name.append(g.value(name,my_namespace.ES_Name).toPython())
+    types.append(g.value(name,my_namespace.ES_Type).toPython())
+    states.append(g.value(name,my_namespace.ES_State).toPython())
+    loc.append(g.value(name,my_namespace.ES_Location).toPython())
+    items.append(g.value(name,my_namespace.ES_Items).toPython())
+
+
+
+#print output
+
+
 
 
 
