@@ -78,6 +78,15 @@ def pp_cos():
 
     return output
 
+def test():
+
+    list_a = get_types()
+
+    list_b = ",".join([str(i) for i in list_a])
+
+    return list_b
+
+
 if __name__ == '__main__':
 
     g = Graph()
@@ -85,11 +94,11 @@ if __name__ == '__main__':
 
     my_namespace = Namespace("http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#")
 
-    print get_co_name()
-
-    print selangor_music()
-    print selangor_fnb()
-    print pp_cos()
+    # print get_co_name()
+    # print get_types()
+    # print selangor_music()
+    # print selangor_fnb()
+    # print pp_cos()
 
 
 

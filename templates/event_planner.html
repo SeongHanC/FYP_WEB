@@ -28,6 +28,11 @@
                     <option value="PA System">PA System</option>
                 </select>
 
+                <label>Which service are you looking for?: </label>
+                {% for service in services %}
+                    <input type="checkbox" id="id_{{services.id}}" name="services" value="{{services.id}}">
+                    <label for="id_{{services.id}}">{{service}}</label>
+                {% endfor %}
             </div>
               <button type="submit" name="submit" value="success" class="btn btn-default">Submit</button>
           </div>
