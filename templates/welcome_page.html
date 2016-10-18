@@ -2,13 +2,19 @@
 
 {% block body %}
 
+    <p style="font-size: 18px;padding-left: 10px">Welcome to EV Solution! To use our service, first, you have to be our member first.</p>
+    <p style="font-size: 18px;padding-left: 10px">If you have not register yet, please register by click on the register.</p>
+    <p style="font-size: 18px;padding-left: 10px">If you have already registered, please login to use our service.</p>
+
+    <br><br>
+
     <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-4">
                     <div class="panel panel-default text-center">
                         <div class="panel-body">
                             <a href="{{ url_for('login') }}">
-                                <img src="{{ url_for('static', filename = 'img/login.png')}}" class="img-responsive" style="width: 100%" alt="LogIn">
+                                <img src="{{ url_for('static', filename = 'img/login1.png')}}" class="img-responsive" style="width: 100%" alt="LogIn">
                             </a>
                         </div>
 
@@ -17,16 +23,10 @@
 
                 <div class="col-sm-4">
                         <div class="panel panel-default text-center">
-                            <div class="panel-heading">
-                                <h1>Have not register yet?</h1>
-                            </div>
                             <div class="panel-body">
                                 <a href="{{ url_for('register') }}">
-                                    <img src="{{ url_for('static', filename = 'img/register.png')}}" class="img-responsive" style="width: 100%" alt="Register">
+                                    <img src="{{ url_for('static', filename = 'img/register2.png')}}" class="img-responsive" style="width: 100%" alt="Register">
                                 </a>
-                            </div>
-                            <div class="panel-footer">
-                                <p id="plan_event">Register</p>
                             </div>
                         </div>
                     </div>
