@@ -12,6 +12,7 @@ import gc
 #from rdflib_search import get_types,get_states
 import rdflib_search
 from rdflib import Graph,Namespace,RDF
+import MySQLdb
 
 app = Flask(__name__)
 app.secret_key = '\x88\xe4\x18H\xf3> d\x08\xa2\xe9U\r\xfc\xff,\x88\xa8\xe6\x87\x99u\x9b\x84'
@@ -27,8 +28,6 @@ def welcome():
 @app.route('/homepage',methods=["GET","POST"])
 def homepage():
 
-    #services = ["Costumes", "F & B", "Music Equipment", "PA System"]
-    #states = ["Pulau Pinang","Selangor"]
     service_list = get_types()
     states_list = get_states()
     services = remove_duplicates(service_list)
@@ -41,20 +40,164 @@ def homepage():
             select_state = request.form.get('state')
             select_et = request.form.get('service')
 
-            if (select_state == 'Selangor' and select_et == 'Music Equipment'):
-                return redirect(url_for('result_selangor_musicEQ'))
+            if select_et == "Concert" and select_state == "Selangor":
 
-            elif (select_state == 'Selangor' and select_et == 'PA System'):
-                return redirect(url_for('result_selangor_pa_system'))
+                co_name = "BLM Music Solution"
+                location = "69, Jalan USJ 8"
+                state = "Selangor"
+                items = "Music Equipment (Guitar, Violin, etc), PA System"
 
-            elif (select_state == 'Selangor' and select_et == 'Costumes'):
-                return redirect(url_for('result_selangor_FNB'))
+                for item in get_states():
+                    if item == select_state:
+                        hist_list_state.append(item)
+                        break
 
-            elif (select_state == 'Penang' and select_et == 'Food & Beverages'):
-                return redirect(url_for('result_pen_costume'))
+                for item1 in get_types():
+                    if item1 == select_et:
+                        hist_list_service.append(item1)
+                        break
+
+                return render_template("result.html", co_name=co_name, state=state, location=location, items=items,
+                                       error=error, states=states, services=services)
+
+            elif select_et == "Costumes" and select_state == "Pulau Pinang":
+
+                co_name = "Ian Costumes Factory"
+                location = "12, Jalan PP, Gelugor"
+                state = "Pulau Pinang"
+                items = "All types of costumes (Halloween costumes, party costumes, etc)"
+
+                for item in get_states():
+                    if item == select_state:
+                        hist_list_state.append(item)
+                        break
+
+                for item1 in get_types():
+                    if item1 == select_et:
+                        hist_list_service.append(item1)
+                        break
+
+                return render_template("result.html", co_name=co_name, state=state, location=location, items=items,
+                                        error=error,states=states,services=services)
+
+            elif select_et == "Festival" and select_state == "Selangor":
+
+                co_name = "Adi's Fireworks Solution"
+                location = "9, Jalan Dato Huri 11, Damansara Utama"
+                state = "Selangor"
+                items = "Fireworks for festivals, celebration, etc."
+
+                for item in get_states():
+                    if item == select_state:
+                        hist_list_state.append(item)
+                        break
+
+                for item1 in get_types():
+                    if item1 == select_et:
+                        hist_list_service.append(item1)
+                        break
+
+                return render_template("result.html", co_name=co_name, state=state, location=location, items=items,
+                                       error=error, states=states, services=services)
+
+            elif select_et == "Food & Beverage" and select_state == "Perak":
+
+                co_name = "Ho Jiak Catering"
+                location = "11, Jalan Perak 89"
+                state = "Perak"
+                items = "Catering (Western, Malay, Chinese, Indian, Fusion)"
+
+                for item in get_states():
+                    if item == select_state:
+                        hist_list_state.append(item)
+                        break
+
+                for item1 in get_types():
+                    if item1 == select_et:
+                        hist_list_service.append(item1)
+                        break
+
+                return render_template("result.html", co_name=co_name, state=state, location=location, items=items,
+                                       error=error, states=states, services=services)
+
+            elif select_et == "Music Equipment":
+
+                if select_state == "Melaka":
+
+                    co_name = "Nigel's"
+                    location = "25, Jalan Selamat"
+                    state = "Melaka"
+                    items = "Music Instruments rental services."
+
+                    for item in get_states():
+                        if item == select_state:
+                            hist_list_state.append(item)
+                            break
+
+                    for item1 in get_types():
+                        if item1 == select_et:
+                            hist_list_service.append(item1)
+                            break
+
+                    return render_template("result.html", co_name=co_name, state=state, location=location, items=items,
+                                       error=error, states=states, services=services)
+
+                elif select_state == "Selangor":
+
+                    co_name = "BLM Music Solution"
+                    location = "69, Jalan USJ 8"
+                    state = "Selangor"
+                    items = "Music Equipment (Guitar, Violin, etc), PA System"
+
+                    for item in get_states():
+                        if item == select_state:
+                            hist_list_state.append(item)
+                            break
+
+                    for item1 in get_types():
+                        if item1 == select_et:
+                            hist_list_service.append(item1)
+                            break
+
+                    return render_template("result.html", co_name=co_name, state=state, location=location, items=items,
+                                           error=error, states=states, services=services)
+
+            elif select_et == "Photography" and select_state == "Johor":
+
+                co_name = "Bean's Photography & Studio"
+                location = "19, Jalan Johor Selatan"
+                state = "Johor"
+                items = "Camera, Camera parts, Photography service for all occasions."
+
+                for item in get_states():
+                    if item == select_state:
+                        hist_list_state.append(item)
+                        break
+
+                for item1 in get_types():
+                    if item1 == select_et:
+                        hist_list_service.append(item1)
+                        break
+
+                return render_template("result.html", co_name=co_name, state=state, location=location, items=items,
+                                       error=error, states=states, services=services)
+
+            elif select_et == "Venue" and select_state == "Kuala Lumpur":
+
+                for item in get_states():
+                    if item == select_state:
+                        hist_list_state.append(item)
+                        break
+
+                for item1 in get_types():
+                    if item1 == select_et:
+                        hist_list_service.append(item1)
+                        break
+
+                return render_template("result1.html",error=error, states=states, services=services)
 
             else:
-                error = "No match found, please find again"
+                error = "No match found. Please try again."
 
         return render_template("homepage.html", error=error,states=states,services=services)
 
@@ -63,37 +206,6 @@ def homepage():
 
 @app.route('/login',methods=["GET","POST"])
 def login():
-
-    """
-    error = ''
-
-    try:
-
-        c, conn = connection()
-        if request.method == "POST":
-
-            data = c.execute("SELECT * FROM users WHERE username = (%s)",
-                             thwart(request.form['username']))
-
-            data = c.fetchone()[2]
-
-            if (request.form['passowrd'],data):
-                session['logged_in'] = True
-                session['username'] = request.form['username']
-                flash("Login Successful")
-                return redirect(url_for(homepage))
-            else:
-                error = "Invalid username or password. Please try again"
-
-        gc.collect()
-        return render_template("login.html", error=error)
-
-    except Exception as e:
-
-        error = "Invalid username or password. Please try again"
-        return render_template("login.html", error=error)
-
-    """
 
     error = ''
 
@@ -104,7 +216,7 @@ def login():
             attempted_username = request.form['username']
             attempted_password = request.form['password']
 
-            if attempted_username == "admin" and attempted_password == "admin":
+            if attempted_username == "edward" and attempted_password == "admin":
                 return redirect(url_for('homepage'))
 
             else:
@@ -119,25 +231,30 @@ def login():
 @app.route('/register',methods=["GET","POST"])
 def register():
 
+    error = ""
+    message = ""
+
     try:
         form = Registration(request.form)
 
         if request.method == "POST" and form.validate():
-            name = form.name.data
             username = form.username.data
             password = form.password.data
+            state = form.state.data
+            location = form.location.data
             c, conn = connection()
 
-            x = c.execute("SELECT * FROM users WHERE username = (%s)",
-                          (thwart(username)))
+            x = c.execute("SELECT * FROM USERS WHERE USERNAME = ('%s')" % \
+                          (username))
+
 
             if int(x) > 0:
-                flash("Username is already taken. Please choose another username")
-                return render_template('register.html', form=form)
+                error = "Username is already taken. Please choose another username"
+                return render_template('register.html', form=form,error = error)
 
             else:
-                c.execute("INSERT INTO users (name, username, password) VALUES (%s, %s, %s)",
-                          (thwart(name), thwart(username), thwart(password)))
+                c.execute("INSERT INTO USERS (USERNAME, PASSWORD, STATE, LOCATION) VALUES ('%s', '%s', '%s'','%s')" % \
+                          (username,password,state,location))
 
                 conn.commit()
                 flash("Congrats! You have been registered!")
@@ -160,65 +277,33 @@ def logout():
     logout_user()
     return redirect(url_for('welcome'))
 
-@app.route('/event_planner',methods=['GET','POST'])
-def event_planner():
-
-    error = ""
-
-    try:
-
-        if request.method == 'POST':
-            select_state = request.form.get('state')
-            select_et = request.form.get('service')
-
-            if (select_state == 'Selangor' and select_et == 'Music Equipment'):
-                return redirect(url_for('result_selangor_musicEQ'))
-
-            elif (select_state == 'Selangor' and select_et == 'PA System'):
-                return redirect(url_for('result_selangor_pa_system'))
-
-            elif (select_state == 'Selangor' and select_et == 'Costumes'):
-                return redirect(url_for('result_selangor_FNB'))
-
-            elif (select_state == 'Penang' and select_et == 'Food & Beverages'):
-                return redirect(url_for('result_pen_costume'))
-
-            else:
-                error = "No match found, please find again"
-
-        return render_template("event_planner.html", error=error,services = ["Costumes","F & B","Music Equipment","PA System"])
-
-    except Exception as e:
-        return render_template("event_planner.html", error=error,services = ["Costumes","F & B","Music Equipment","PA System"])
-
-
 
 @app.route('/user_profile')
 def user_profile():
 
     username = "Edward"
-    return render_template("user_profile.html",username=username)
 
-@app.route('/result_selangor_musicEQ')
-def result_selangor_musicEQ():
-    return render_template("ABC_Solution.html")
+    output_state = []
+    output_service = []
 
-@app.route('/result_selangor_pa_system')
-def result_selangor_pa_system():
-    return render_template("ABC_Solution.html")
+    for state in hist_list_state:
+        output_state.append(state)
 
-@app.route('/result_selangor_FNB')
-def result_selangor_FNB():
-    return render_template("BLA_Sdn_Bhd.html")
+    for serv in hist_list_service:
+        output_service.append(serv)
 
-@app.route('/result_pen_costume')
-def result_pen_costume():
-    return render_template("ABC_Solution.html")
+    return render_template("user_profile.html",username=username,states = output_state,services = output_service)
 
 if __name__ == '__main__':
 
+    db = MySQLdb.connect(host="localhost", user="root", passwd="t1213121", db="User")
+    cursor = db.cursor()
+
     g = Graph()
     g.parse("rdf_output.owl")
+
+    hist_list_state = []
+    hist_list_service = []
 
     my_namespace = Namespace("http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#")
 
@@ -238,8 +323,8 @@ if __name__ == '__main__':
 
         types = []
 
-        for name in g.subjects(RDF.type, my_namespace.Event_suppliers):
-            types.append(g.value(name, my_namespace.ES_Type).toPython())
+        for type in g.subjects(RDF.type, my_namespace.Event_suppliers):
+            types.append(g.value(type, my_namespace.ES_Type).toPython())
 
         return types
 
@@ -248,10 +333,10 @@ if __name__ == '__main__':
 
         states = []
 
-        for name in g.subjects(RDF.type, my_namespace.Event_suppliers):
-            states.append(g.value(name, my_namespace.ES_State).toPython())
+        for state in g.subjects(RDF.type, my_namespace.Event_suppliers):
+            states.append(g.value(state, my_namespace.ES_State).toPython())
 
-        #output = remove_duplicates(states)
+        states.sort()
         return states
 
 
@@ -259,8 +344,8 @@ if __name__ == '__main__':
 
         loc = []
 
-        for name in g.subjects(RDF.type, my_namespace.Event_suppliers):
-            loc.append(g.value(name, my_namespace.ES_Location).toPython())
+        for location in g.subjects(RDF.type, my_namespace.Event_suppliers):
+            loc.append(g.value(location, my_namespace.ES_Location).toPython())
 
         return loc
 
@@ -269,8 +354,10 @@ if __name__ == '__main__':
 
         items = []
 
-        for name in g.subjects(RDF.type, my_namespace.Event_suppliers):
-            items.append(g.value(name, my_namespace.ES_Items).toPython())
+        for item in g.subjects(RDF.type, my_namespace.Event_suppliers):
+            items.append(g.value(item, my_namespace.ES_Items).toPython())
+
+        items.sort()
 
         return items
 
@@ -285,5 +372,6 @@ if __name__ == '__main__':
                 seen.add(i)
 
         return output_list
+
 
     app.run(debug=True)

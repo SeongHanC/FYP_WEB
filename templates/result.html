@@ -1,0 +1,26 @@
+{% extends "homepage.html" %}
+
+{% block body %}
+
+    <table class="table">
+      <thead>
+        <tr>
+            <th>#</th>
+            <th>Company Name</th>
+            <th>Location</th>
+            <th>State</th>
+            <th>Service Provided</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+            <td>{{co_name}}</td>
+            <td>{{location}}</td>
+            <td>{{state}}</td>
+            <td>{{items}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+{% endblock %}

@@ -335,28 +335,28 @@
     
 
 
-    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ABC_Solution -->
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Adi_Firework -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#ABC_Solution">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Adi_Firework">
         <rdf:type rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"/>
-        <ES_Items rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music Equipment (Guitar, Violin, etc), PA System</ES_Items>
-        <ES_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123, Jalan KK, Kelana Jaya</ES_Location>
-        <ES_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ABC_Solution</ES_Name>
-        <ES_State rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Selangor</ES_State>
-        <ES_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</ES_Type>
+        <ES_Items>Fireworks for festivals, celebration, etc.</ES_Items>
+        <ES_Location>9, Jalan Dato Huri 11, Damansara Utama</ES_Location>
+        <ES_Name>Adi&apos;s Fireworks Solution</ES_Name>
+        <ES_State>Selangor</ES_State>
+        <ES_Type>Festival</ES_Type>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#BLA_Sdn_Bhd -->
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#BLM_Music_Solution -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#BLA_Sdn_Bhd">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#BLM_Music_Solution">
         <rdf:type rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"/>
-        <ES_Items rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catering (Western, Malay, Chinese, Indian, Fusion)</ES_Items>
-        <ES_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">99, Jalan SJ, Subang Jaya</ES_Location>
-        <ES_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bla_Sdn_Bhd</ES_Name>
+        <ES_Items rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music Equipment (Guitar, Violin, etc), PA System</ES_Items>
+        <ES_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">69, Jalan USJ 8</ES_Location>
+        <ES_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BLM Music Solution</ES_Name>
         <ES_State rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Selangor</ES_State>
-        <ES_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F &amp; B</ES_Type>
+        <ES_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concert</ES_Type>
     </owl:NamedIndividual>
     
 
@@ -372,6 +372,19 @@
         <Event_time rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.00</Event_time>
         <Event_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</Event_type>
         <Event_venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stadium Merdeka</Event_venue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Bean_Photography -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Bean_Photography">
+        <rdf:type rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"/>
+        <ES_Items>Camera, Camera parts, Photography service for all occasions.</ES_Items>
+        <ES_Location>69, Jalan Johor Selatan</ES_Location>
+        <ES_Name>Bean&apos;s Photography &amp; Studio</ES_Name>
+        <ES_State>Johor</ES_State>
+        <ES_Type>Photography</ES_Type>
     </owl:NamedIndividual>
     
 
@@ -404,15 +417,15 @@
     
 
 
-    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#IAN_SDN_BHD -->
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Ho_Jiak_Catering -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#IAN_SDN_BHD">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Ho_Jiak_Catering">
         <rdf:type rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"/>
-        <ES_Items rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All types of costumes</ES_Items>
-        <ES_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12, Jalan PP, Gelugor</ES_Location>
-        <ES_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ian_Sdn_Bhd</ES_Name>
-        <ES_State rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pulau Pinang</ES_State>
-        <ES_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Costumes</ES_Type>
+        <ES_Items rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catering (Western, Malay, Chinese, Indian, Fusion)</ES_Items>
+        <ES_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11, Jalan Perak 89</ES_Location>
+        <ES_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ho Jiak Catering</ES_Name>
+        <ES_State rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perak</ES_State>
+        <ES_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Food &amp; Beverage</ES_Type>
     </owl:NamedIndividual>
     
 
@@ -427,6 +440,19 @@
         <User_location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bandar Sunway</User_location>
         <User_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ian</User_name>
         <User_preference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technology</User_preference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Ian_Costumes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Ian_Costumes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"/>
+        <ES_Items rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All types of costumes (Halloween costumes, party costumes, etc)</ES_Items>
+        <ES_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12, Jalan PP, Gelugor</ES_Location>
+        <ES_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ian Costumes Factory</ES_Name>
+        <ES_State rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pulau Pinang</ES_State>
+        <ES_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Costumes</ES_Type>
     </owl:NamedIndividual>
     
 
@@ -469,6 +495,45 @@
         <User_location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Puchong</User_location>
         <User_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jessica</User_name>
         <User_preference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</User_preference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Monster_Island_Hotel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Monster_Island_Hotel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"/>
+        <ES_Items>Grand Ballroom (max capacity: 500)</ES_Items>
+        <ES_Location>Monster Road</ES_Location>
+        <ES_Name>Monster Island Hotel</ES_Name>
+        <ES_State>Kuala Lumpur</ES_State>
+        <ES_Type>Venue</ES_Type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Nigel_Music_Solution -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Nigel_Music_Solution">
+        <rdf:type rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"/>
+        <ES_Items>Music Instruments rental services.</ES_Items>
+        <ES_Location>25, Jalan Selamat</ES_Location>
+        <ES_Name>Nigel&apos;s Piano &amp; Music Solution</ES_Name>
+        <ES_State>Melaka</ES_State>
+        <ES_Type>Music Equipment</ES_Type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Pius_Hotel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Pius_Hotel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#Event_suppliers"/>
+        <ES_Items>Grand Ballroom (max capacity: 800 pax), Function Rooms (max capacity: 100 pax)</ES_Items>
+        <ES_Location>Maine Road</ES_Location>
+        <ES_Name>Pius Hotel</ES_Name>
+        <ES_State>Kuala Lumpur</ES_State>
+        <ES_Type>Venue</ES_Type>
     </owl:NamedIndividual>
 </rdf:RDF>
 

@@ -6,28 +6,23 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="panel panel-default text-center">
-                        <div class="panel-heading">
-                            <h1>Already a member?</h1>
+                        <div class="panel-body">
+                            <a href="{{ url_for('login') }}">
+                                <img src="{{ url_for('static', filename = 'img/login.png')}}" class="img-responsive" style="width: 100%" alt="LogIn">
+                            </a>
                         </div>
-                            <div class="panel-body">
-                                <a href="{{ url_for('login') }}">
-                                    <img src="/src/question_mark.png" class="img-responsive" style="width: 100%" alt="Find Event">
-                                </a>
-                            </div>
-                            <div class="panel-footer">
-                                <p id="find_event">Login</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-sm-4">
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
                         <div class="panel panel-default text-center">
                             <div class="panel-heading">
                                 <h1>Have not register yet?</h1>
                             </div>
                             <div class="panel-body">
                                 <a href="{{ url_for('register') }}">
-                                    <img src="/src/question_mark.png" class="img-responsive" style="width: 100%" alt="Find Event">
+                                    <img src="{{ url_for('static', filename = 'img/register.png')}}" class="img-responsive" style="width: 100%" alt="Register">
                                 </a>
                             </div>
                             <div class="panel-footer">

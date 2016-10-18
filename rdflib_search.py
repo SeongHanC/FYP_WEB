@@ -17,6 +17,7 @@ def get_types():
     for name in g.subjects(RDF.type,my_namespace.Event_suppliers):
         types.append(g.value(name,my_namespace.ES_Type).toPython())
 
+    types.sort()
     return types
 
 def get_states():
@@ -45,6 +46,15 @@ def get_items():
 
     for name in g.subjects(RDF.type, my_namespace.Event_suppliers):
         items.append(g.value(name,my_namespace.ES_Items).toPython())
+
+    return items
+
+def get_all():
+
+    items = []
+
+    for item in g.subjects(RDF.type, my_namespace.Event_suppliers):
+        items.append(g.value(item, my_namespace.Event.suppliers).toPython())
 
     return items
 
@@ -108,13 +118,15 @@ if __name__ == '__main__':
 
     my_namespace = Namespace("http://www.semanticweb.org/seonghan/ontologies/2016/7/untitled-ontology-3#")
 
-    # print get_co_name()
-    # print get_types()
-    print get_states()
+    #print get_co_name()
+    #print get_types()
+    print get_types()
+    #print get_states()
     # print selangor_music()
-    # print selangor_fnb()
+    #  print selangor_fnb()
     # print pp_cos()
 
+    #print get_all()
 
 
 
