@@ -22,11 +22,13 @@ def get_types():
 def get_states():
 
     states = []
+    output = []
 
     for name in g.subjects(RDF.type, my_namespace.Event_suppliers):
         states.append(g.value(name,my_namespace.ES_State).toPython())
 
-    return states
+    output = remove_duplicates(states)
+    return output
 
 def get_loc():
 
@@ -87,6 +89,18 @@ def test():
     return list_b
 
 
+def remove_duplicates(a_list):
+    seen = set()
+    output_list = []
+
+    for i in a_list:
+        if i not in seen:
+            output_list.append(i)
+            seen.add(i)
+
+    return output_list
+
+
 if __name__ == '__main__':
 
     g = Graph()
@@ -96,6 +110,7 @@ if __name__ == '__main__':
 
     # print get_co_name()
     # print get_types()
+    print get_states()
     # print selangor_music()
     # print selangor_fnb()
     # print pp_cos()

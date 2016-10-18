@@ -29,9 +29,10 @@ def homepage():
 
     #services = ["Costumes", "F & B", "Music Equipment", "PA System"]
     #states = ["Pulau Pinang","Selangor"]
-    services = get_types()
-    states = get_states()
-
+    service_list = get_types()
+    states_list = get_states()
+    services = remove_duplicates(service_list)
+    states = remove_duplicates(states_list)
     error = ""
 
     try:
@@ -192,9 +193,11 @@ def event_planner():
 
 
 
-@app.route('/event_finder')
-def event_finder():
-    return "hello"
+@app.route('/user_profile')
+def user_profile():
+
+    username = "Edward"
+    return render_template("user_profile.html",username=username)
 
 @app.route('/result_selangor_musicEQ')
 def result_selangor_musicEQ():
@@ -248,6 +251,7 @@ if __name__ == '__main__':
         for name in g.subjects(RDF.type, my_namespace.Event_suppliers):
             states.append(g.value(name, my_namespace.ES_State).toPython())
 
+        #output = remove_duplicates(states)
         return states
 
 
@@ -269,5 +273,17 @@ if __name__ == '__main__':
             items.append(g.value(name, my_namespace.ES_Items).toPython())
 
         return items
+
+    def remove_duplicates(a_list):
+
+        seen = set()
+        output_list = []
+
+        for i in a_list:
+            if i not in seen:
+                output_list.append(i)
+                seen.add(i)
+
+        return output_list
 
     app.run(debug=True)

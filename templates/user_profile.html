@@ -1,0 +1,44 @@
+{% extends "header.html" %}
+
+{% block body %}
+
+<div class="container">
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">Hello {{username}} !</h3>
+        </div>
+
+        <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center">
+                    <img alt="User Pic" src="{{ url_for('static', filename = 'img/user_icon.png')}}" width="200" height="200"></div>
+
+                <div class=" col-md-9 col-lg-9 ">
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Name:</td>
+                        <td>{{username}}</td>
+                      </tr>
+
+                      <tr>
+                        <td>Location:</td>
+                        <td>Subang Jaya</td>
+                      </tr>
+
+                      <tr>
+                        <td>State:</td>
+                        <td>Selangor</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
